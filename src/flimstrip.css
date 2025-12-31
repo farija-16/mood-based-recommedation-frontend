@@ -1,0 +1,58 @@
+/* FILM STRIP CONTAINER */
+.film-strip-container {
+  width: 140px;
+  overflow: hidden;
+}
+
+/* SCROLLING COLUMN */
+.film-strip {
+  display: flex;
+  flex-direction: column;
+  animation: scrollPosters var(--speed , 18s) linear infinite;
+}
+
+/* EACH FRAME BOX */
+.film-frame {
+  width: 140px;
+  height: 180px;
+  margin: 12px 0;
+  border: 6px solid #000;
+  overflow: hidden;
+  background: #111;
+  border-radius: 4px;
+}
+
+/* POSTER IMAGE */
+.film-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* SCROLL ANIMATION */
+@keyframes scrollPosters {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.filmstrip-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  margin-right: 90px;
+  pointer-events: none;
+  z-index: 1;
+  gap: 60px;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+

@@ -1,0 +1,80 @@
+.rec-container {
+  min-height: 100vh;
+  padding: 40px;
+  background: black;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+
+.rec-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.rec-back-btn {
+  background: #ffffff10;
+  padding: 10px 20px;
+  border: 1px solid #ffffff30;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  margin-bottom: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.rec-back-btn:hover {
+  background: #ffffff22;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+}
+
+.rec-section {
+  margin-top: 40px;
+}
+
+.section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.rec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 25px;
+}
+
+.rec-card {
+  background: #ffffff10;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #ffffff20;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.rec-card:hover {
+  transform: scale(1.05);
+  background: #ffffff20;
+}
+
+.rec-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.rec-name {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}

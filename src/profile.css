@@ -1,0 +1,101 @@
+/* =========================
+   PROFILE PAGE CONTAINER
+========================= */
+.profile-container {
+  min-height: 100vh;
+  width: 100%;
+  background: radial-gradient(circle at 50% 50%, #050505, #000000);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Star dust overlay (same feel as home) */
+.profile-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://transparenttextures.com/patterns/dark-matter.png");
+  opacity: 0.25;
+  z-index: 0;
+}
+
+/* =========================
+   PROFILE CARD
+========================= */
+.profile-card {
+  position: relative;
+  z-index: 2;
+  width: 380px;
+  padding: 35px 40px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 18px;
+  border: 1px solid #ffffff22;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Title */
+.profile-card h1 {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+/* Info rows */
+.profile-info {
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin: 12px 0;
+  color: #e5e7eb;
+}
+
+.profile-info span {
+  opacity: 0.7;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+/* Common button */
+.profile-actions button {
+  padding: 12px 22px;
+  border-radius: 12px;
+  border: 1px solid #ffffff33;
+  background: #ffffff12;
+  backdrop-filter: blur(6px);
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+/* Hover */
+.profile-actions button:hover {
+  background: #ffffff22;
+  transform: scale(1.05);
+}
+
+/* Logout emphasis */
+.profile-actions .logout-btn {
+  border-color: #ff6b6b66;
+  color: #ff9b9b;
+}
+
+.profile-actions .logout-btn:hover {
+  background: rgba(255, 107, 107, 0.25);
+}
