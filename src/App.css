@@ -36,21 +36,28 @@ html, body, #root {
    MAIN CONTAINER (CENTER BOX)
 ============================ */
 .container {
-  width: 80%;
+  width: 90%;
   max-width: 900px;
   height: 80vh;
   background: rgba(255, 255, 255, 0.92);
-  margin: 60px auto;
+  margin: 40px auto;
   border-radius: 30px;
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;  /* FIXED WIDTH */
+  grid-template-columns: 1fr;
   overflow: hidden;
   box-shadow: 0px 25px 60px rgba(0,0,0,0.35);
 }
 
+.container.signup .login-box {
+  max-width: 380px;
+}
+
+
 /* SIGNUP reverse layout */
-.container.signup {
-  grid-template-columns: 0.9fr 1.1fr;
+@media (min-width: 768px) {
+  .container.signup {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
 }
 
 .login-section {
@@ -206,6 +213,7 @@ html, body, #root {
   background: radial-gradient(circle at 30% 50%, #9d8dc3, #83b9d2, #cebbeb, #7375a2);
   position: relative;
   overflow: hidden;
+  min-height: 220px;
 }
 
 /* Falling lights / star streaks */
@@ -278,19 +286,38 @@ html, body, #root {
   opacity: 0.9;
 }
 
-@media (max-width: 768px) {
+
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1.1fr 0.9fr;
+    height: 80vh;
+    margin: 60px auto;
+  }
+  /* Keep your reverse signup layout here too */
+  .container.signup {
+    grid-template-columns: 0.9fr 1.1fr;
+  }
+}
+
+/* MOBILE FIXES: Ensure sections look good when stacked */
+@media (max-width: 767px) {
   .container {
     grid-template-columns: 1fr;
-    width: 90%;
-    height: auto;
-    margin: 30px auto;
   }
 
   .animation-section {
-    display: none;
+    height: 250px; /* Give the animation some space on mobile */
+    order: 1;      /* Animation on top */
+  }
+  
+  .login-section {
+    order: 2;      /* Form on bottom */
+    padding: 25px 20px;
   }
 
-  .login-section {
-    padding: 30px 20px;
+  .login-box {
+    width: 100%;
+    max-width: 320px;
   }
 }
